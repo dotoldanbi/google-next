@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "google-next": "file:",
+    "html-react-parser": "^5.2.2",
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

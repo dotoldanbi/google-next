@@ -30,5 +30,9 @@ export default async function WebSearchPage({ searchParams }) {
       </div>
     );
   }
-  return <div>{results && <WebSearchResults results={data} />}</div>;
+  return (
+    <Suspense>
+      <div>{results && <WebSearchResults results={data} />}</div>
+    </Suspense>
+  );
 }

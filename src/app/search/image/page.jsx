@@ -6,6 +6,7 @@ export default async function ImageSearchPage({ searchParams }) {
   const startIndex = awtSearchParams.start || "1";
   const searchTerm = awtSearchParams.searchTerm;
   const searchIndex = awtSearchParams.searchIndex;
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const response = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX_KEY}&q=${searchTerm}&searchType=image&start=${startIndex}`
   );

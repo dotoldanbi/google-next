@@ -4,6 +4,9 @@ import WebSearchResults from "@/app/components/WebSearchResults";
 export default async function WebSearchPage({ searchParams }) {
   const awtSearchParams = await searchParams;
   const searchTerm = awtSearchParams.searchTerm;
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
   const response = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_GOOGLE_API_KEY}&cx=${process.env.NEXT_PUBLIC_GOOGLE_CX_KEY}&q=${searchTerm}`
   );
